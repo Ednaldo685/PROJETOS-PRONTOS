@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <link rel="stylesheet" href="design.css">
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(id).classList.remove('hidden');
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('sobre'); // Mostrar a seção "Sobre Mim" por padrão
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>MEU CURRICULO ONLINE</h1>
+    </header>
+    <ul class="menu">
+        <li><a href="#sobre" onclick="showSection('sobre')">Sobre Mim</a></li>
+        <li><a href="#formacao" onclick="showSection('formacao')">Formação Acadêmica</a></li>
+        <li><a href="#portifolio" onclick="showSection('portfolio')">Portfólio</a></li>
+        <li><a href="#contato" onclick="showSection('contato')">Contato</a></li>
+    </ul>
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p>Me chamo Ednaldo, tenho 25 anos e vivo com minha família que provem do meu Deus. Minha filha linda chama Helena Vitória e minha maravilhosa esposa chamada Danyelle. Sempre gostamos de ir a igreja e curtir o tempo livre para brincar com nossa filha nos brinquedos no lago ou assistir algo em família durante os finais de semana.</p>
+    </section>
+    <section id="formacao" class="hidden">
+        <h2>Formação e Experiências</h2>
+        <p>Formado em Tecnologia da Informação - INSTITUIÇÃO UNINTER.<br>
+        Cursando ADS Análise e Desenvolvimento de Sistemas - INSTITUIÇÃO UNINTER.<br>
+        <h5>CURSOS ADICIONAIS EM INFORMÁTICA</h5>Informática Rápida<br> Montagem e Manutenção de Computadores e Redes<br> Web Design<br> Design Gráfico<br> Banco de Dados (INSTITUIÇÃO BRADESCO).</p><br>
+    </section>
+    <section id="portfolio" class="hidden">
+        <h2>Meu Portfólio</h2>
+        <p><h4>Projeto Faculdade | Desenvolvimento em Python<h4></p>
+        <p><a href="#" style="color: #4b0082;">Link para o projeto</a></p>
+    </section>
+    <section id="contato" class="hidden">
+        <h2>Meus Contatos</h2>
+        <p><h4>Quer entrar em contato?</h4> Telefone: (16) 99617-8092<br> <h3>E-mail:</h3> ednaldolima685@gmail.com</p>
+    </section>
+</body>
+</html>
